@@ -51,4 +51,11 @@ group :development, :test do
   # And we need to clean up our mess when using factories
   gem 'database_cleaner'
 
+  # Stay on top of your test coverage with simplecov.
+  gem 'simplecov'
+  # Pretty reports using html
+  gem 'simplecov-html'
+  # For compatibility with some CI environments use the rcov formater
+  gem 'simplecov-rcov'
+
 end
