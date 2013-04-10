@@ -18,6 +18,13 @@ gem 'jquery-rails'
 # PostgreSQL is highly recommended and should be your default.
 gem 'pg'
 
+# Unicorn is a great option as a server.
+gem 'unicorn'
+# You could also choose to use thin.
+# gem 'thin'
+# Puma is also a great choice, though for full benefit you must be threadsafe.
+# gem 'puma'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

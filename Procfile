@@ -3,7 +3,7 @@
 # You should specify your databases first
 
 # Define your web process
-web: rails s
+web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb
 
 # Foreman can run guard for us too
 guard: bundle exec guard
