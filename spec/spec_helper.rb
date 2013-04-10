@@ -60,6 +60,18 @@ Spork.prefork do
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
 
+    # Allow us to use simple filters like :focus
+    config.treat_symbols_as_metadata_keys_with_true_values = true
+    # If everything is filtered out we'll run everything
+    config.run_all_when_everything_filtered = true
+    # We'll use :focus to specify which tests to run
+    config.filter_run :focus
+    # Optionally use a tag to filter out tests
+    # config.filter_run_excluding :slow
+
+    # Factory Girl setup
+    config.include FactoryGirl::Syntax::Methods
+
     # Since we are using factories we must clean up
     config.after(:each) do
       DatabaseCleaner.clean
