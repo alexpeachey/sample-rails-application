@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# If using rvm you can specify ruby and gemset in comments
+#ruby=2.0.0
+#ruby-gemset=sample
+
 # Bundler lets you specify which ruby to use.
 # It is a good idea to put what ruby should be used for your app here.
 ruby '2.0.0'
@@ -58,4 +62,8 @@ group :development, :test do
   # For compatibility with some CI environments use the rcov formater
   gem 'simplecov-rcov'
 
+  # We can make our tests faster with spork
+  # For rspec 'spork rspec --bootstrap'
+  # For cucumber 'spork cucumber --bootstrap'
+  gem 'spork-rails'
 end
