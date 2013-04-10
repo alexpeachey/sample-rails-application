@@ -46,4 +46,9 @@ group :development, :test do
   # Cucumber is often the right choices for some partners.
   # gem "cucumber"
 
+  # Factories are prefered over fixtures
+  gem 'factory_girl_rails'
+  # And we need to clean up our mess when using factories
+  gem 'database_cleaner'
+
 end
