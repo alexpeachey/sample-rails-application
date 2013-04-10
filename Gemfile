@@ -56,14 +56,32 @@ group :development, :test do
   gem 'database_cleaner'
 
   # Stay on top of your test coverage with simplecov.
-  gem 'simplecov'
+  gem 'simplecov', require: false
   # Pretty reports using html
-  gem 'simplecov-html'
+  gem 'simplecov-html', require: false
   # For compatibility with some CI environments use the rcov formater
-  gem 'simplecov-rcov'
+  gem 'simplecov-rcov', require: false
 
   # We can make our tests faster with spork
   # For rspec 'spork rspec --bootstrap'
   # For cucumber 'spork cucumber --bootstrap'
   gem 'spork-rails'
+
+  # We can use guard to watch changes in the filesystem and act on them
+  gem 'guard'
+  gem 'rb-inotify', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
+  # We can get nifty notifications like via Growl
+  gem 'ruby_gntp'
+  # There are several useful plugins for Guard
+  # rspec integration
+  gem 'guard-rspec'
+  # spork integration
+  gem 'guard-spork'
+  # live reload integration (you need a live reload browser plugin)
+  gem 'guard-livereload'
+  # Automatically annotate your models
+  gem 'guard-annotate'
+  
 end
