@@ -32,5 +32,18 @@ end
 # There are few gems that you only need in development and not test and vice versa.
 # You should put most everything in a combined group
 group :development, :test do
+  # Originate practices TDD/BDD and the prefered framework is rspec
+  # Once bundled use 'rails g rspec:install' to perform initial setup
+  gem "rspec-rails", "~> 2.4"
+  
+  # For integration/feature tests the prefered tool is capybara
+  gem "capybara"
+  # Capybara uses rack-test by default unless a test is flagged :js
+  # For :js tests selenium is used unless another driver is installed
+  # You may wish to use webkit and specify 'Capybara.javascript_driver = :webkit'
+  # gem "capybara-webkit"
+
+  # Cucumber is often the right choices for some partners.
+  # gem "cucumber"
 
 end
