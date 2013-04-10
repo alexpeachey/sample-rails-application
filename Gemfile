@@ -83,5 +83,10 @@ group :development, :test do
   gem 'guard-livereload'
   # Automatically annotate your models
   gem 'guard-annotate'
-  
+
+  # Foreman can be used to manage your various processes
+  # Start up your whole dev environment with 'bundle exec foreman start'
+  # Set ENV variables in .env, see sample.env
+  # Foreman uses a Procfile just like Heroku
+  gem 'foreman'
 end

@@ -16,3 +16,6 @@
 
 # Ignore coverage reports.
 /coverage
+
+# Ignore .env used by foreman
+/.env
