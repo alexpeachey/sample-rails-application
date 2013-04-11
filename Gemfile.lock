@@ -28,6 +28,7 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    addressable (2.3.3)
     annotate (2.5.0)
       rake
     arel (3.0.2)
@@ -95,6 +96,10 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.7.7)
     kgio (2.8.0)
+    launchy (2.2.0)
+      addressable (~> 2.3)
+    letter_opener (1.1.0)
+      launchy (~> 2.2.0)
     listen (0.7.3)
     lumberjack (1.0.3)
     mail (2.5.3)
@@ -210,6 +215,7 @@ DEPENDENCIES
   guard-rspec
   guard-spork
   jquery-rails
+  letter_opener
   pg
   rails (= 3.2.13)
   rb-fchange

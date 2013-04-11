@@ -96,4 +96,7 @@ group :development, :test do
   # Set ENV variables in .env, see sample.env
   # Foreman uses a Procfile just like Heroku
   gem 'foreman'
+
+  # Letter Opener is a very useful gem for testing what your action mailer mail looks like
+  gem 'letter_opener'
 end
