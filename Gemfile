@@ -31,6 +31,9 @@ gem 'slim-rails'
 # But you could also use haml
 # gem 'haml-rails'
 
+# Rails 4 uses Strong Parameters instead of attr_accessible so we'll use it too
+gem 'strong_parameters'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
