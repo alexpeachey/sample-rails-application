@@ -25,6 +25,12 @@ gem 'unicorn'
 # Puma is also a great choice, though for full benefit you must be threadsafe.
 # gem 'puma'
 
+# By default templates are in ERB but there are much better alternatives
+# We'll use slim
+gem 'slim-rails'
+# But you could also use haml
+# gem 'haml-rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
