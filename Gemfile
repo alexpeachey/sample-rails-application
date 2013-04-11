@@ -38,6 +38,11 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
 
+  # Using a style framework like Foundation can make your app look great with little effort
+  gem 'zurb-foundation', '~> 4.0.0'
+  # You could also use bootstrap if you wanted
+  # gem 'bootstrap-sass'
+
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # It is often best to install node.js on your local system.
   # If you need to compile your assets in production consider installing node.js there as well.
