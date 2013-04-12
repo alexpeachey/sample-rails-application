@@ -40,6 +40,9 @@ gem 'strong_parameters'
 # rails g simple_form:install --foundation
 gem 'simple_form'
 
+# We will use Draper to provide decoration of objects for the view
+gem 'draper'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

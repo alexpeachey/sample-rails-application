@@ -36,6 +36,8 @@ Spork.prefork do
   # Require our Database Cleaner to clean up after ourselves
   require 'database_cleaner'
   DatabaseCleaner.strategy = :truncation
+  # Require draper helpers
+  require 'draper/test/rspec_integration'
   RSpec.configure do |config|
     # ## Mock Framework
     #
