@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find(params[:id]).decorate
     respond_to do |format|
       format.html
       format.json { render json: @user }
@@ -9,16 +9,18 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = User.find(params[:id]).decorate
   end
 
   def update
     @user = User.find(params[:id])
     respond_to do |format|
       if @user.update_attributes(user_params)
+        @user.decorate
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
+        @user.decorate
         format.html { render action: "edit" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
