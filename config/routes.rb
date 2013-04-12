@@ -4,8 +4,17 @@ Sample::Application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
 
+  resources :users
+
+
   root to: 'pages#index'
-  
+
+  # Route the omniauth callback to sessions#create
+  match 'auth/:provider/callback', to: 'sessions#create'
+  match 'signout', to: 'sessions#destroy', as: 'signout'
+  # On failure we'll just go home
+  match 'auth/failure', to: redirect('/')
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

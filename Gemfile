@@ -40,6 +40,7 @@ gem 'strong_parameters'
 # rails g simple_form:install --foundation
 gem 'simple_form'
 
+
 # We will use Draper to provide decoration of objects for the view
 gem 'draper'
 
@@ -51,6 +52,13 @@ gem 'sidekiq'
 gem 'sidekiq-failures'
 gem 'slim', '>= 1.3.0' # We need to force slim's version for the management console
 
+# Unless you have a good reason, there is often no point to doing your own authentication.
+# Omniauth lets you leverage someone else's tested/stable authentication.
+# We will wire up Twitter but adding additional strategies is very simple.
+gem 'omniauth-twitter'
+# gem 'omniauth-facebook'
+# gem 'omniauth-google-oauth2'
+# gem 'omniauth-github'
 
 # Gems used only for assets and not required
 # in production environments by default.
