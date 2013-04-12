@@ -34,6 +34,12 @@ gem 'slim-rails'
 # Rails 4 uses Strong Parameters instead of attr_accessible so we'll use it too
 gem 'strong_parameters'
 
+# A form builder makes your forms easier, we could write our own or use a popular one.
+# We'll use simple_form
+# Below we also specify using the foundation framework so we do:
+# rails g simple_form:install --foundation
+gem 'simple_form'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
