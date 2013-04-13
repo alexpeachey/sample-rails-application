@@ -27,12 +27,12 @@ Spork.prefork do
   require 'rspec/rails'
   require 'rspec/autorun'
   require 'capybara/rspec'
+  require 'capybara/rails'
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
   # Require Factory Girl and load factories
   require 'factory_girl'
-  FactoryGirl.find_definitions
   # Require our Database Cleaner to clean up after ourselves
   require 'database_cleaner'
   DatabaseCleaner.strategy = :truncation
@@ -79,12 +79,23 @@ Spork.prefork do
       DatabaseCleaner.clean
     end
 
+    # Include integration helpers for request specs
+    config.include IntegrationSpecHelper, type: :feature
+
     # Run specs in random order to surface order dependencies. If you find an
     # order dependency and want to debug it, you can fix the order by providing
     # the seed, which is printed after each run.
     #     --seed 1234
     config.order = "random"
   end
+
+  # Mock out OmniAuth
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
+    provider: 'twitter',
+    uid: '12345',
+    info: { name: 'Test User' }
+  })
 end
 
 Spork.each_run do

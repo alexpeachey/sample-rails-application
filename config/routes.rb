@@ -4,10 +4,9 @@ Sample::Application.routes.draw do
   require 'sidekiq/web'
   mount Sidekiq::Web => '/sidekiq'
 
-  resources :users
-
-
   root to: 'pages#index'
+
+  resources :users, only: [:show,:edit,:update,:destroy]
 
   # Route the omniauth callback to sessions#create
   match 'auth/:provider/callback', to: 'sessions#create'
