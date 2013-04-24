@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   protected
   def require_login
-    not_authenticated unless current_user.present?
+    not_authenticated unless current_user.signed_in?
   end
 
   def not_authenticated

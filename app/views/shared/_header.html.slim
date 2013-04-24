@@ -6,4 +6,5 @@
           a href='/' Sample
     section.top-bar-section
       ul.right
-        li= current_user.authentication_link
+        = current_user.account_link
+        = current_user.authentication_link

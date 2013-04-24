@@ -18,6 +18,14 @@ class UserDecorator < Draper::Decorator
     end
   end
 
+  def account_link
+    if signed_in?
+      h.render 'shared/account_link'
+    else
+      ''
+    end
+  end
+
   def signed_in?
     id.present?
   end
