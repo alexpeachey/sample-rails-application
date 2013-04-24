@@ -43,6 +43,9 @@ gem 'simple_form'
 # We will use Draper to provide decoration of objects for the view
 gem 'draper'
 
+# We will use Friendly_id to have nicer URLs
+gem 'friendly_id'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
