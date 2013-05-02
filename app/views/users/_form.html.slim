@@ -1,9 +1,10 @@
 = simple_form_for(@user) do |f|
   = f.error_notification
 
-  .form-inputs
-    = f.input :name
-    = f.input :email
-
+  .panel
+    .form-inputs
+      = f.input :name
+    .form-inputs
+      = f.input :email
   .form-actions
-    = f.button :submit
+    = f.button :submit, 'Update', class: 'expand'

@@ -1,10 +1,13 @@
-p#notice = notice
-
-p
-  strong Name:
-  = @user.name
-p
-  strong Email:
-  = @user.email
-
-= link_to 'Edit', edit_user_path(@user)
+.row
+  .small-12.large-6.columns
+    h4 Your Profile
+    .panel
+      .row.field-display
+        .small-6.columns.label Name:
+        .small-6.columns.value= @user.name
+      .row.field-display
+        .small-6.columns.label Email:
+        .small-6.columns.value= @user.email
+    .row
+      .small-12.columns
+        = link_to 'Edit', edit_user_path(@user), class: 'button primary expand'
