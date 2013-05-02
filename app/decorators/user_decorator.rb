@@ -20,7 +20,7 @@ class UserDecorator < Draper::Decorator
 
   def account_link
     if signed_in?
-      h.render 'shared/account_link'
+      h.render partial: 'shared/account_link', locals: {user: self}
     else
       ''
     end

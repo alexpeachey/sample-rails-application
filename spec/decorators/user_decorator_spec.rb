@@ -31,8 +31,11 @@ describe UserDecorator do
     end
 
     context 'when signed in' do
-      before { user.save }
-      specify { user.account_link.should =~ /#{user.name}/ }
+      before { user.save; user.reload; user.h.stub(:render) }
+      it 'renders the account link' do
+        user.h.should_receive(:render).with({partial: 'shared/account_link', locals: {user: user}})
+        user.account_link
+      end
     end
   end
 end
