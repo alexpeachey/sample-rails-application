@@ -3,11 +3,11 @@
     h4 Your Profile
     .panel
       .row.field-display
-        .small-6.columns.label Name:
-        .small-6.columns.value= @user.name
+        .small-3.columns.label Name:
+        .small-9.columns.value= @user.name
       .row.field-display
-        .small-6.columns.label Email:
-        .small-6.columns.value= @user.email
+        .small-3.columns.label Email:
+        .small-9.columns.value= @user.email
     .row
       .small-12.columns
         = link_to 'Edit', edit_user_path(@user), class: 'button primary expand'
