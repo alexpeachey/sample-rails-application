@@ -46,6 +46,12 @@ gem 'draper'
 # We will use Friendly_id to have nicer URLs
 gem 'friendly_id'
 
+# Any hard work should always be done in a background job queue. One of the best is Sidekiq
+gem 'sidekiq'
+gem 'sidekiq-failures'
+gem 'slim', '>= 1.3.0' # We need to force slim's version for the management console
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

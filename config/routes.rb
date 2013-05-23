@@ -1,4 +1,8 @@
 Sample::Application.routes.draw do
+  
+  # Mount sidekiq so we can see what's going on in the queue
+  require 'sidekiq/web'
+  mount Sidekiq::Web => '/sidekiq'
 
   root to: 'pages#index'
   
