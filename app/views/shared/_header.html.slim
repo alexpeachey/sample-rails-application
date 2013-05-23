@@ -2,9 +2,11 @@
   nav.top-bar
     ul.title-area
       li.name
-        h1
-          a href='/' Sample
+        h1= link_to 'Sample', root_url
+      li class="toggle-topbar menu-icon"
+        a href='#'
+          span Menu
     section.top-bar-section
       ul.right
-        = current_user.account_link
-        = current_user.authentication_link
+        li= current_user.account_link
+        li= current_user.authentication_link
