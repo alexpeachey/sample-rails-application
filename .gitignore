@@ -19,3 +19,6 @@
 
 # Ignore .env used by foreman
 /.env
+
+# Ignore files in .redis
+/.redis
