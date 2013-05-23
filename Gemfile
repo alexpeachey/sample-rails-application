@@ -125,4 +125,13 @@ group :development, :test do
 
   # Letter Opener is a very useful gem for testing what your action mailer mail looks like
   gem 'letter_opener'
+
+  # Better Errors combined with Binding of Caller make dev errors in the browser much nicer
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  # There is an awesome Chrome extension for rails which gives you an extra tab on your dev tools
+  # https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg?hl=en-US
+  # To use it you need Meta Request
+  gem 'meta_request'
 end
