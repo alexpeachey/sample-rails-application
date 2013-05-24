@@ -2,7 +2,7 @@ Sample::Application.routes.draw do
   
   # Mount sidekiq so we can see what's going on in the queue
   require 'sidekiq/web'
-  constraint = -> (request) { request.session[:user_id] }
+  constraint = -> (request) { request.session[:user_id] && User.find(request.session[:user_id]).admin? }
   constraints constraint do
     mount Sidekiq::Web => '/sidekiq'
   end
