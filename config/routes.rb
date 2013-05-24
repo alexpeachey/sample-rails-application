@@ -2,7 +2,10 @@ Sample::Application.routes.draw do
   
   # Mount sidekiq so we can see what's going on in the queue
   require 'sidekiq/web'
-  mount Sidekiq::Web => '/sidekiq'
+  constraint = -> (request) { request.session[:user_id] }
+  constraints constraint do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 
   root to: 'pages#index'
 
