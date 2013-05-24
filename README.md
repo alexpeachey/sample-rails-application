@@ -22,3 +22,8 @@ When environement variables are needed, they should be added to your .env file a
 
 Comments have been added through out several of the configuration files explaining why certain things were done the way they were done.
 
+## Authentication
+
+Omniauth with sample Twitter authentication has been added. You will need to create an application on Twitter and set the appropriate environment variables. See the sample.env for the keys.
+
+
